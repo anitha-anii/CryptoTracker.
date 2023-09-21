@@ -10,6 +10,7 @@ import 'chart.js/auto';
 
 
 
+
 function App() {
   return (
     <div className="App">
