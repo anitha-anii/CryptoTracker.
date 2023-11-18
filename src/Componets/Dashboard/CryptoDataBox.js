@@ -41,9 +41,10 @@ const CryptoDataBox = ({ value, handleChange, filteredCoins }) => {
       </Box>
       <TabPanel value="1">
          <div className="grid">
-          {filteredCoins.map((coin, index) => (
+         {filteredCoins.map((coin, index) => (
+          <div className={coin.price_change_percentage_24h > 0 ? "positive" : "negative"}>
          <Link to={`/coin/${coin.id}`} key={coin.id}>
-          <div key={index} className="coinCard">
+           <div key={index} className="coinCard">
               <div className="first">
                 <div>
                   <img src={coin.image} alt="coin" width={"50px"} />
@@ -90,9 +91,11 @@ const CryptoDataBox = ({ value, handleChange, filteredCoins }) => {
                 <p>Market Cap : ${coin.market_cap.toLocaleString()}</p>
               </div>
             </div>
-            </Link>
+          </Link>
+          </div>
           ))}
         </div>
+        
       </TabPanel>
       <TabPanel value="2">
          <div className="list">

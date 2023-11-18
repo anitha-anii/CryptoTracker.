@@ -34,7 +34,7 @@ input:focus{
     gap:10px;
 }
 .coinCard{
-    cursor: pointer;
+    /* cursor: pointer; */
     padding: 30px;
     border-radius: 15px;
     background-color: rgb(241, 236, 236);
@@ -70,7 +70,7 @@ input:focus{
     display: flex;
   justify-content: space-evenly;
   align-items: center;
-  cursor: pointer;
+  /* cursor: pointer; */
   padding: 10px;
   border-radius: 20px;
   color: black;
@@ -78,6 +78,7 @@ input:focus{
 }
 .coinList:hover{
     background-color: rgb(241, 236, 236);
+   
 }
 .make{
     display: flex;
@@ -179,6 +180,25 @@ input:focus{
  margin-top: 50%;
  color: rgb(49, 49, 179);
 }
+
+
+.positive:hover {
+    border: 1px solid green;
+    border-radius: 20px;
+    width: 94%;
+    cursor: grab;
+  }
+  
+  .negative:hover {
+    border: 1px solid red;
+    border-radius: 20px;
+    width: 94%;
+    cursor: none;
+  }
+    
+  
+  
+  
 @media screen and (max-width: 767px) {
     .grid {
       display: grid;
